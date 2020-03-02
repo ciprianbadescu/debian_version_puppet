@@ -1,6 +1,10 @@
 require "debian_version_puppet"
 
 describe DebianVersionPuppet::Version do
+  context "should fail if version cannot be parsed" do
+    #FIXME
+  end
+
   context "when creating new version" do
     it "is parsing basic version" do
       v = DebianVersionPuppet::Version.parse('1:20191210.1-0ubuntu0.19.04.2')
